@@ -1,0 +1,41 @@
+:host {
+    height: 100%
+}
+.sip-calculator-div {
+    
+    margin-top: 60px;
+    background-color: aqua;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #81b9c1;
+    color: white;
+    
+    
+}
+
+.sip-calculator-div >div> p {
+    margin: 0 auto;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.calculator-div {
+    background-color: antiquewhite;
+    margin: 0 auto;
+    margin-top: 20px;
+    height: 500px;
+    width: 500px;
+
+    .monthly-investment-div {
+        color: black;
+        display: inline-block;
+        margin-top: 25px;
+        margin-left: 80px;
+    }
+}
+

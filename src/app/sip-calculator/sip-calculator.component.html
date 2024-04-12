@@ -1,0 +1,28 @@
+<div class="sip-calculator-div" layout="column" layout-align="center center">
+    <div >
+        <p>Sip Calculator Component is working!</p>
+    </div>
+    <div class="calculator-div">
+        <form [formGroup]="investmentForm" (ngSubmit)="calculateSIP()">
+            <div class="form-group">
+                <label for="montlyInvestment">Monthly Investment:</label>
+                <input type="number" class="form-control" formControlName="monthlyInvestment">
+            </div>
+            <div class="form-group">
+                <label for="expectedReturn">Expected Return Rate (%):</label>
+                <input type="number" class="form-control" formControlName="expectedReturn">
+            </div>
+            <div class="form-group">
+                <label for="timePeriod">Time Period (Years):</label>
+                <input type="number" class="form-control" formControlName="timePeriod">
+            </div>
+            <button type="submit" class="btn btn-primary" [disabled]="investmentForm.invalid">Calculate</button>
+        </form>
+    </div>
+    <div *ngIf="result">
+        <h4>Result:</h4>
+        <p>Total Investment: {{ result.totalInvestment }}</p>
+        <p>Total Return: {{ result.totalReturn }}</p>
+        <p>Gain: {{result.amountGained}}</p>
+    </div>
+</div>
